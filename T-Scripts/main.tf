@@ -9,8 +9,7 @@ variable env_prefix {}
 variable avail_zone {}
 variable my_ip {}
 variable instance_type {}
-
-
+variable ami_key_pair_name {}
 
 
 data "aws_ami" "amazon-linux-image" {
