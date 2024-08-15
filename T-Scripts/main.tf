@@ -111,6 +111,10 @@ resource "aws_default_security_group" "default-sg" {
   }
 }
 
+resource "aws_key_pair" "ssh-key" {
+  key_name   = "myapp-key"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBURKdWJSOgP44QFdvaLFXQSa48LSP4Kph6nMKSODimq ubuntu@ip-172-31-16-45"
+}
 output "server-ip" {
     value = aws_instance.myapp-server.public_ip
 }
